@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Showcase from "./components/Showcase";
 
 export default function Home() {
   return (
     <div
       // className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]"
-      className="flex flex-col space-y-20 border-2 border-dashed border-blue-500"
+      className="flex flex-col space-y-20"
     >
       {/* <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
@@ -108,9 +109,7 @@ export default function Home() {
       />
 
       {/* MINI PORTFOLIO */}
-      <div className="flex flex-col items-center border-2 border-dashed border-red-500">
-        <h2>CHECK OUT MY WORK</h2>
-      </div>
+      <Showcase />
     </div>
   );
 }
