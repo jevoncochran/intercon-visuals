@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 const navLinks = [
-  { title: "Home", href: "/#home" },
+  { title: "Home", href: "/" },
   { title: "Portfolio", href: "/#porfolio" },
-  { title: "About", href: "/#about" },
-  { title: "Contact", href: "/#contact" },
+  { title: "About", href: "/about" },
+  { title: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -18,28 +18,15 @@ const Navbar = () => {
           width={150}
           height={100}
         />
-        <nav className="">
+        <nav>
           <ul className="flex space-x-10 justify-center">
-            <li>
-              <a href="/" className="text-black hover:text-gray-300">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/portfolio" className="text-black hover:text-gray-300">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="text-black hover:text-gray-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="text-black hover:text-gray-300">
-                Contact
-              </a>
-            </li>
+            {navLinks.map((page) => (
+              <li key={page.title} className="uppercase">
+                <a href={page.href} className="text-black hover:text-gray-300">
+                  {page.title}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
