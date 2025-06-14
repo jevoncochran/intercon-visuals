@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -18,12 +19,14 @@ const Navbar = () => {
     <div className="flex justify-center px-8 py-4">
       <div className="md:flex justify-between items-center w-full space-y-4">
         <div className="flex justify-between">
-          <Image
-            src="/assets/nav/logo-black.png"
-            alt="Intercon Visuals"
-            width={150}
-            height={100}
-          />
+          <Link href="/">
+            <Image
+              src="/assets/nav/logo-black.png"
+              alt="Intercon Visuals"
+              width={150}
+              height={100}
+            />
+          </Link>
 
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
