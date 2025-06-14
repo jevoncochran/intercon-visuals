@@ -3,20 +3,23 @@ import React from "react";
 
 const about = () => {
   return (
-    <div className="px-30 py-10 flex space-x-8">
+    <div className="px-6 md:px-30 py-10 md:flex space-x-8 space-y-4">
+      <h2 className="md:hidden text-center">Hi, I'm Jevon!</h2>
+
       {/* Image */}
-      <div>
+      <div className="w-full flex justify-center">
         <Image
           src="/assets/about/about-pic.jpg"
           alt="About Intercon Visuals"
           width={1000}
           height={400}
+          className="w-[300px] md:w-[1000px] h-auto"
         />
       </div>
 
       {/* Text */}
       <div className="flex flex-col space-y-6">
-        <h2>Hi, I'm Jevon!</h2>
+        <h2 className="hidden md:flex">Hi, I'm Jevon!</h2>
         <div className="flex flex-col space-y-4">
           <p>
             I am Jevon Cochran: a photographer, videographer, and multimedia
