@@ -3,7 +3,7 @@ import Showcase from "./components/Showcase";
 
 export default function Home() {
   return (
-    <div className="flex flex-col space-y-20">
+    <div className="flex flex-col">
       <Image
         src="/assets/home/me-with-camera.jpg"
         width={6000}
