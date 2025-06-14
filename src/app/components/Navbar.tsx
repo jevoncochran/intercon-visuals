@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { SocialIcon } from "react-social-icons";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -10,8 +11,8 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center py-4">
-      <div className="flex flex-col items-center w-full space-y-4">
+    <div className="flex justify-center px-8 py-4">
+      <div className="flex justify-between items-center w-full space-y-4">
         <Image
           src="/assets/nav/logo-black.png"
           alt="Intercon Visuals"
@@ -29,6 +30,29 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
+        <div className="flex space-x-4 text-2xl">
+          {" "}
+          <SocialIcon
+            url="https://instagram.com/interconvisuals"
+            target="_blank"
+            style={{ height: 40, width: 40 }}
+          />
+          <SocialIcon
+            url="https://youtube.com/@interconvisuals"
+            target="_blank"
+            style={{ height: 40, width: 40 }}
+          />
+          <SocialIcon
+            url="https://facebook.com/interconvisuals"
+            target="_blank"
+            style={{ height: 40, width: 40 }}
+          />
+          <SocialIcon
+            url="https://twitter.com/interconvisuals"
+            target="_blank"
+            style={{ height: 40, width: 40 }}
+          />
+        </div>
       </div>
     </div>
   );
