@@ -4,7 +4,7 @@ import React from "react";
 const about = () => {
   return (
     <div className="px-6 md:px-30 py-10 md:flex space-x-8 space-y-4">
-      <h2 className="md:hidden text-center">Hi, I'm Jevon!</h2>
+      <h2 className="md:hidden text-center">Hi, I&rsquo;m Jevon!</h2>
 
       {/* Image */}
       <div className="w-full flex justify-center">
@@ -19,7 +19,7 @@ const about = () => {
 
       {/* Text */}
       <div className="flex flex-col space-y-6">
-        <h2 className="hidden md:flex">Hi, I'm Jevon!</h2>
+        <h2 className="hidden md:flex">Hi, I&rsquo;m Jevon!</h2>
         <div className="flex flex-col space-y-4">
           <p>
             I am Jevon Cochran: a photographer, videographer, and multimedia
