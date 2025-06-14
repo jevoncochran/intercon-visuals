@@ -1,12 +1,17 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const showcaseVideos = [
   {
     title: "Karmia's 55th Birthday Celebration",
     id: "1062512983",
     thumbnail: "/assets/home/k55-thumbnail.jpg",
+  },
+  {
+    title: "Phyllis' 70th Birthday Party",
+    id: "1093350505",
+    thumbnail: "/assets/home/phyllis_70th_thumbnail.jpg",
   },
   {
     title: "Vida's Way",
