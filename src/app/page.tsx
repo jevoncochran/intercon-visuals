@@ -9,7 +9,7 @@ export default function Home() {
         width={6000}
         height={4000}
         alt="Jevon Cochran"
-        className="w-screen h-120 object-cover object-[0%_30%]"
+        className="w-screen h-120 object-cover md:object-[0%_30%]"
       />
 
       {/* MINI PORTFOLIO */}

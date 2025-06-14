@@ -76,7 +76,7 @@ const ContactForm = () => {
       ></textarea>
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white font-semibold py-3 rounded-xl hover:bg-blue-700 transition"
+        className="w-full bg-black text-white font-semibold py-3 rounded-xl hover:bg-gray-500 transition"
       >
         Send Message
       </button>
