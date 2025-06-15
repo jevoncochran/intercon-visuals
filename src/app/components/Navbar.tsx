@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 
 const navLinks = [
   { title: "Home", href: "/" },
-  { title: "Portfolio", href: "/#porfolio" },
+  // Eventually, this will be its own route but it can be the home route for now
+  { title: "Portfolio", href: "/" },
   { title: "About", href: "/about" },
   { title: "Contact", href: "/contact" },
 ];
