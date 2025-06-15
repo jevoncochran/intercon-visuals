@@ -23,8 +23,8 @@ const Navbar = () => {
             <Image
               src="/assets/nav/logo-black.png"
               alt="Intercon Visuals"
-              width={150}
-              height={100}
+              width={112.5}
+              height={75}
             />
           </Link>
 
@@ -50,19 +50,19 @@ const Navbar = () => {
             <div className="flex space-x-3 mt-2">
               <SocialIcon
                 url="https://instagram.com/interconvisuals"
-                style={{ height: 25, width: 25 }}
+                style={{ height: 30, width: 30 }}
               />
               <SocialIcon
                 url="https://youtube.com/@interconvisuals"
-                style={{ height: 25, width: 25 }}
+                style={{ height: 30, width: 30 }}
               />
               <SocialIcon
                 url="https://facebook.com/interconvisuals"
-                style={{ height: 25, width: 25 }}
+                style={{ height: 30, width: 30 }}
               />
               <SocialIcon
                 url="https://twitter.com/interconvisuals"
-                style={{ height: 25, width: 25 }}
+                style={{ height: 30, width: 30 }}
               />
             </div>
           </div>

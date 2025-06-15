@@ -30,6 +30,6 @@ h6 {
 
 @layer base {
   h2 {
-    @apply text-[32px] font-bold;
+    @apply text-xl md:text-[32px] font-bold;
   }
 }
