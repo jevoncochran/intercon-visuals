@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -13,7 +14,36 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const pathName = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // This closes the mobile menu when a link is clicked that doesn't change the route
+  // Without this function, the mobile menu would only close on route changes
+  const handleSamePathLinkClick = (path: string, linkHref: string) => {
+    if (path === linkHref) {
+      setMenuOpen(false);
+    }
+  };
+
+  // Close menu *after* route changes
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathName]);
+
+  // Disable scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Clean up on unmount
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   return (
     <div className="flex justify-center px-8 py-4">
@@ -35,16 +65,37 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <div className="fixed inset-0 z-40 bg-white top-26 w-full h-[calc(100vh-5rem)] flex flex-col items-center mt-4 space-y-4 md:hidden">
+          <div className="fixed inset-0 z-40 bg-white w-full h-full flex flex-col items-center mt-4 space-y-4 md:hidden">
+            <div className="flex justify-between w-full px-8">
+              <Link
+                href="/"
+                onClick={() => handleSamePathLinkClick(pathName, "/")}
+              >
+                <Image
+                  src="/assets/nav/logo-black.png"
+                  alt="Intercon Visuals"
+                  width={112.5}
+                  height={75}
+                />
+              </Link>
+
+              <button
+                className="md:hidden"
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
+                {menuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.title}
                 href={link.href}
+                passHref
                 className="uppercase text-black hover:text-gray-400"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => handleSamePathLinkClick(pathName, link.href)}
               >
                 {link.title}
-              </a>
+              </Link>
             ))}
             {/* Mobile Social Icons */}
             <div className="flex space-x-3 mt-2">
