@@ -1,6 +1,5 @@
-"use client";
 import React from "react";
-import ContactForm from "../components/ContactForm";
+import QuickContactForm from "@/components/QuickContactForm";
 
 const ContactPage = () => {
   return (
@@ -11,7 +10,7 @@ const ContactPage = () => {
           Send us a message. Tell us about your project and we will get back to
           you in 24 hours or less.
         </p>
-        <ContactForm />
+        <QuickContactForm />
       </div>
     </div>
   );

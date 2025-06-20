@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
+import { ProjectProvider } from "../context/ProjectContext";
 
 export const metadata: Metadata = {
   title: "Intercon Visuals",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <Navbar />
-        {children}
+        <ProjectProvider>
+          <Navbar />
+          {children}
+        </ProjectProvider>
       </body>
     </html>
   );
