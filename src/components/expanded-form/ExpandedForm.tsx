@@ -11,6 +11,8 @@ const ExpandedForm = () => {
   const { projectInfo, setProjectInfo } = useProject();
 
   const [formStep, setFormStep] = useState<FormStep>(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleBack = () => {
     if (formStep > 0) {
@@ -22,6 +24,7 @@ const ExpandedForm = () => {
     if (formStep < 2) {
       setFormStep(formStep + 1);
     } else {
+      setIsSubmitting(true);
       try {
         const res = await fetch("/api/contact", {
           method: "POST",
@@ -30,14 +33,16 @@ const ExpandedForm = () => {
         });
 
         if (res.ok) {
-          alert("Inquiry sent!");
           setProjectInfo(initialProjectInfo);
+          setIsSubmitted(true);
         } else {
           alert("Something went wrong. Please try again.");
         }
       } catch (err) {
         console.log(err);
         alert("An error occurred. Please try again.");
+      } finally {
+        setIsSubmitting(false);
       }
     }
   };
@@ -53,6 +58,31 @@ const ExpandedForm = () => {
 
     return "Budget & Booking";
   };
+
+  const getContinueButtonLabel = (step: FormStep, submitStatus: boolean) => {
+    if (step === 2) {
+      if (submitStatus) {
+        return "SUBMITTING...";
+      } else {
+        return "SUBMIT";
+      }
+    } else {
+      return "CONTINUE";
+    }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="text-center py-16">
+        <h2 className="text-2xl font-bold text-green-600 mb-2">
+          🎉 Thank you!
+        </h2>
+        <p className="text-lg text-gray-700">
+          Your inquiry has been sent successfully. We’ll be in touch soon!
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full">
@@ -72,9 +102,14 @@ const ExpandedForm = () => {
         <button
           type="button"
           onClick={handleContinue}
-          className="w-full bg-black text-white font-semibold py-3 rounded-xl hover:bg-gray-500 transition"
+          disabled={isSubmitting}
+          className={`w-full py-3 rounded-xl font-semibold transition ${
+            isSubmitting
+              ? "bg-gray-400 text-white cursor-not-allowed"
+              : "bg-black text-white hover:bg-gray-500"
+          }`}
         >
-          {formStep === 2 ? "SUBMIT" : "CONTINUE"}
+          {getContinueButtonLabel(formStep, isSubmitting)}
         </button>
         <div></div>
       </div>
