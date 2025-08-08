@@ -4,6 +4,16 @@ import React, { useState } from "react";
 
 const showcaseVideos = [
   {
+    title: "Olivo Med Spa",
+    id: "1106966584",
+    thumbnail: "/assets/home/olivo_med_spa_thumbnail.jpg",
+  },
+  {
+    title: "Vida's Way",
+    id: "1072425656",
+    thumbnail: "/assets/home/vidas_way_thumbnail.jpg",
+  },
+  {
     title: "Karmia's 55th Birthday Celebration",
     id: "1062512983",
     thumbnail: "/assets/home/k55-thumbnail.jpg",
@@ -12,16 +22,6 @@ const showcaseVideos = [
     title: "Phyllis' 70th Birthday Party",
     id: "1093350505",
     thumbnail: "/assets/home/phyllis_70th_thumbnail.jpg",
-  },
-  {
-    title: "Vida's Way",
-    id: "1072425656",
-    thumbnail: "/assets/home/vidas_way_thumbnail.jpg",
-  },
-  {
-    title: "Karmia's 55th Birthday Celebration Pt. 2",
-    id: "1062534041",
-    thumbnail: "/assets/home/k55_pt2_thumbnail.jpg",
   },
 ];
 
