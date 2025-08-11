@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="flex justify-between">
           <Link href="/">
             <Image
-              src="/assets/nav/logo-black.png"
+              src="/assets/nav/logo-white.png"
               alt="Intercon Visuals"
               width={112.5}
               height={75}
@@ -123,11 +123,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-10 justify-center">
           {navLinks.map((page) => (
-            <a
-              key={page.title}
-              href={page.href}
-              className="text-black hover:text-gray-300 uppercase"
-            >
+            <a key={page.title} href={page.href} className="uppercase">
               {page.title}
             </a>
           ))}
