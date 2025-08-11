@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Showcase from "../components/Showcase";
 
 export default function Home() {
