@@ -30,7 +30,7 @@ const Showcase = () => {
 
   return (
     <div className="flex flex-col space-y-4 items-center px-6 md:px-10 py-8 md:py-12">
-      <h2>A SAMPLE OF MY WORK</h2>
+      <h2>CHECK OUT SOME OF OUR RECENT PROJECTS</h2>
       <div className="w-full grid md:grid-cols-2 gap-x-4 gap-y-4 md:py-8">
         {showcaseVideos.map((video) =>
           selectedVideo === video.id ? (
