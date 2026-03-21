@@ -6,59 +6,63 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: NextRequest) {
   try {
     const {
-      clientName,
-      email,
+      firstName,
+      lastName,
+      title,
+      company,
       phone,
-      description,
-      businessName,
-      website,
-      instagram,
-      projectType,
-      otherProjectType,
-      date,
-      location,
-      targetAudience,
-      platforms,
-      otherPlatform,
-      references,
-      budget,
-      heardAboutUsBy,
-      heardAboutUsByOther,
+      email,
+      heardFrom,
+      howCanWeHelp,
     } = await req.json();
 
+    const safeFirstName = firstName?.trim() || "";
+    const safeLastName = lastName?.trim() || "";
+    const safeTitle = title?.trim() || "Not provided";
+    const safeCompany = company?.trim() || "Not provided";
+    const safePhone = phone?.trim() || "Not provided";
+    const safeEmail = email?.trim() || "Not provided";
+    const safeHeardFrom = heardFrom?.trim() || "Not provided";
+    const safeHowCanWeHelp =
+      howCanWeHelp?.trim()?.replace(/\n/g, "<br />") || "Not provided";
+
+    const fullName =
+      `${safeFirstName} ${safeLastName}`.trim() || "Not provided";
+
     await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Intercon Visuals Contact Form <onboarding@resend.dev>",
       to: "jevon.cochran@gmail.com",
-      subject: "New Inquiry for Intercon Visuals",
+      subject: "New Contact Form Submission - Intercon Visuals",
       html: `
-        <h3>New Inquiry</h3>
-        <p><strong>Name:</strong> ${clientName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Project Description:</strong><br/>${description.replace(/\n/g, "<br/>")}</p>
-        <p><strong>Business:</strong> ${businessName}</p>
-        <p><strong>Website:</strong> ${website}</p>
-        <p><strong>Instagram Handle:</strong> ${instagram}</p>
-        <p><strong>Project Types:</strong> ${projectType}</p>
-        <p><strong>Other Project Type:</strong> ${otherProjectType}</p>
-        <p><strong>Date:</strong> ${date}</p>
-        <p><strong>Location:</strong> ${location}</p>
-        <p><strong>Target audience:</strong> ${targetAudience}</p>
-        <p><strong>To Be Shared on the following platforms:</strong> ${platforms}</p>
-        <p><strong>Other Platform:</strong> ${otherPlatform}</p>
-        <p><strong>Reference Videos:</strong> ${references}</p>
-        <p><strong>Budget:</strong> ${budget}</p>
-        <p><strong>How did they hear about us?:</strong> ${heardAboutUsBy}</p>
-        <p><strong>Other Way they heard about us:</strong> ${heardAboutUsByOther}</p>
+        <h2>New Contact Form Submission</h2>
 
-        `,
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Title:</strong> ${safeTitle}</p>
+        <p><strong>Company / Organization:</strong> ${safeCompany}</p>
+        <p><strong>Phone Number:</strong> ${safePhone}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>How did they hear about us?</strong> ${safeHeardFrom}</p>
+        <p><strong>How can we help?</strong><br />${safeHowCanWeHelp}</p>
+      `,
     });
 
-    return new Response(JSON.stringify({ success: true }), { status: 200 });
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (err) {
-    console.error(err);
-    return new Response(JSON.stringify({ error: "Failed to send email" }), {
-      status: 500,
-    });
+    console.error("Resend API error:", err);
+
+    return new Response(
+      JSON.stringify({ success: false, error: "Failed to send email" }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   }
 }
