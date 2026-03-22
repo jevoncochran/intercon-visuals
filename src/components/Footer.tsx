@@ -20,7 +20,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-black/10 text-black">
+    <footer className="bg-black border-t border-white/10 text-white">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-20">
         <div className="grid md:grid-cols-3 gap-12">
           {/* LEFT: BRAND */}
@@ -29,14 +29,14 @@ const Footer = () => {
               Intercon <span className="text-lime-400">Visuals</span>
             </h3>
 
-            <p className="text-black/70 leading-relaxed max-w-sm">
+            <p className="text-white/60 leading-relaxed max-w-sm">
               Cinematic content that builds brands and converts leads.
             </p>
           </div>
 
           {/* MIDDLE: NAV */}
           <div>
-            <h4 className="font-[family-name:var(--font-montserrat)] uppercase text-sm tracking-[0.2em] text-black/50 mb-6">
+            <h4 className="font-[family-name:var(--font-montserrat)] uppercase text-sm tracking-[0.2em] text-white/40 mb-6">
               Navigation
             </h4>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                 <li key={link.title}>
                   <Link
                     href={link.href}
-                    className="text-black/80 hover:text-lime-500 transition-colors duration-300"
+                    className="text-white/70 hover:text-lime-400 transition-colors duration-300"
                   >
                     {link.title}
                   </Link>
@@ -56,23 +56,23 @@ const Footer = () => {
 
           {/* RIGHT: CONTACT + SOCIAL */}
           <div>
-            <div className="space-y-3 mb-6 text-black/70">
-              <p className="text-sm uppercase tracking-[0.12em] text-black/50">
+            <div className="space-y-3 mb-6 text-white/70">
+              <p className="text-sm uppercase tracking-[0.12em] text-white/40">
                 Email
               </p>
               <a
                 href="mailto:jevon@interconvisuals.com"
-                className="block hover:text-lime-500 transition-colors duration-300"
+                className="block hover:text-lime-400 transition-colors duration-300"
               >
                 jevon@interconvisuals.com
               </a>
 
-              <p className="text-sm uppercase tracking-[0.12em] text-black/50 mt-4">
+              <p className="text-sm uppercase tracking-[0.12em] text-white/40 mt-4">
                 Phone
               </p>
               <a
                 href="tel:15108073300"
-                className="block hover:text-lime-500 transition-colors duration-300"
+                className="block hover:text-lime-400 transition-colors duration-300"
               >
                 (510) 807-3300
               </a>
@@ -97,7 +97,7 @@ const Footer = () => {
                     url={url}
                     target="_blank"
                     bgColor="transparent"
-                    fgColor="#000000"
+                    fgColor="#ffffff"
                     style={{ height: 30, width: 30 }}
                   />
                 </div>
@@ -107,7 +107,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM */}
-        <div className="border-t border-black/10 mt-12 pt-6 text-center text-black/50 text-sm">
+        <div className="border-t border-white/10 mt-12 pt-6 text-center text-white/40 text-sm">
           © {new Date().getFullYear()} Intercon Visuals. All rights reserved.
         </div>
       </div>
