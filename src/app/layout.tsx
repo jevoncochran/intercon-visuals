@@ -6,8 +6,33 @@ import Footer from "@/components/Footer";
 import { ProjectProvider } from "../context/ProjectContext";
 
 export const metadata: Metadata = {
-  title: "Intercon Visuals",
-  description: "Video production agency based in Tampa, FL",
+  title: "Tampa Videographer for Businesses | Intercon Visuals",
+  description:
+    "Intercon Visuals is a Tampa-based video production company creating cinematic brand videos, commercial content, and social media video for businesses across the Tampa Bay area.",
+  metadataBase: new URL("https://www.interconvisuals.com"),
+  openGraph: {
+    type: "website",
+    url: "https://www.interconvisuals.com",
+    siteName: "Intercon Visuals",
+    title: "Tampa Videographer for Businesses | Intercon Visuals",
+    description:
+      "Cinematic brand videos, commercial content, and social media video for businesses across Tampa Bay. Serving Tampa, St. Pete, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland & Largo.",
+    images: [
+      {
+        url: "/assets/nav/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Intercon Visuals – Tampa Video Production Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tampa Videographer for Businesses | Intercon Visuals",
+    description:
+      "Cinematic brand videos, commercial content, and social media video for businesses across Tampa Bay.",
+    images: ["/assets/nav/logo.png"],
+  },
 };
 
 const inter = Inter({
