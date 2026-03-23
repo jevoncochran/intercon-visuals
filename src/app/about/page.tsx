@@ -1,6 +1,33 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About Us | Tampa Video Production Company | Intercon Visuals",
+  description:
+    "Learn about Intercon Visuals — a Tampa-based video production company helping businesses across the Tampa Bay area build premium brands through cinematic video and strategic marketing.",
+  openGraph: {
+    title: "About Us | Tampa Video Production Company | Intercon Visuals",
+    description:
+      "Founded in 2025, Intercon Visuals helps Tampa Bay businesses capture attention, communicate their value, and position themselves as premium brands through cinematic video.",
+    url: "https://www.interconvisuals.com/about",
+    images: [
+      {
+        url: "/assets/nav/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Intercon Visuals – Tampa Video Production Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Tampa Video Production Company | Intercon Visuals",
+    description:
+      "Tampa-based video production company helping businesses build premium brands through cinematic video and strategic marketing.",
+  },
+};
 import Navbar from "../../components/Navbar";
 
 const About = () => {
