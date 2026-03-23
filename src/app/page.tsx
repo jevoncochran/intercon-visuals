@@ -219,7 +219,7 @@ export default function Home() {
             <div>
               <img
                 src="/assets/home/ai_generated_web_designer.png"
-                alt="Paid Ads service"
+                alt="Web design service"
                 className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
               />
             </div>
@@ -231,7 +231,7 @@ export default function Home() {
             <div>
               <img
                 src="/assets/home/ai_generated_graphic_designer.png"
-                alt="Paid Ads service"
+                alt="Graphic design service"
                 className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
               />
             </div>

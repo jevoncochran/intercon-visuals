@@ -7,6 +7,8 @@ const serviceAreas = [
   { city: "Wesley Chapel" },
   { city: "Lakeland" },
   { city: "Largo" },
+  { city: "Bradenton" },
+  { city: "Sarasota" },
 ];
 
 const ServiceAreas = () => {
