@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hire a Tampa Videographer | Contact Intercon Visuals",
+  title: "Elevate Your Brand with Professional Video | Contact Intercon Visuals",
   description:
     "Ready to grow your brand with professional video? Contact Intercon Visuals — Tampa's premier video production company serving businesses across the Tampa Bay area.",
   openGraph: {
-    title: "Hire a Tampa Videographer | Contact Intercon Visuals",
+    title: "Elevate Your Brand with Professional Video | Contact Intercon Visuals",
     description:
       "Serious about growing your brand? Get in touch with Intercon Visuals. We serve businesses in Tampa, St. Pete, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland & Largo.",
     url: "https://www.interconvisuals.com/contact",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire a Tampa Videographer | Contact Intercon Visuals",
+    title: "Elevate Your Brand with Professional Video | Contact Intercon Visuals",
     description:
       "Ready to grow your brand with professional video? Contact Intercon Visuals — Tampa's premier video production company.",
   },
