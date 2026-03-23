@@ -17,7 +17,7 @@ const navLinks = [
 const socialLinks = [
   "https://instagram.com/interconvisuals",
   "https://youtube.com/@interconvisuals",
-  "https://facebook.com/interconvisuals",
+  "https://www.facebook.com/profile.php?id=61586069221839",
   "https://tiktok.com/@interconvisuals",
 ];
 
