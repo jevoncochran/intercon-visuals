@@ -1,4 +1,6 @@
 import Showcase from "../components/Showcase";
+import ServiceAreas from "../components/ServiceAreas";
+// import ClientLogos from "../components/ClientLogos";
 import { ArrowRight } from "lucide-react";
 
 export default function Home() {
@@ -256,8 +258,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CLIENT LOGOS — hidden until logos are finalized */}
+      {/* <ClientLogos /> */}
+
       {/* MINI PORTFOLIO */}
       <Showcase />
+
+      {/* SERVICE AREAS */}
+      <ServiceAreas />
     </div>
   );
 }
