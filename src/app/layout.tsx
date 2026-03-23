@@ -10,13 +10,16 @@ export const metadata: Metadata = {
   description:
     "Intercon Visuals is a Tampa-based video production company creating cinematic brand videos, commercial content, and social media video for businesses across the Tampa Bay area.",
   metadataBase: new URL("https://www.interconvisuals.com"),
+  verification: {
+    google: "aOqxHyr-OWqNnkTyRY1zrdlGsfg5YERujxfqLCicrKk",
+  },
   openGraph: {
     type: "website",
     url: "https://www.interconvisuals.com",
     siteName: "Intercon Visuals",
     title: "Tampa Videographer for Businesses | Intercon Visuals",
     description:
-      "Cinematic brand videos, commercial content, and social media video for businesses across Tampa Bay. Serving Tampa, St. Pete, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland & Largo.",
+      "Cinematic brand videos, commercial content, and social media video for businesses across Tampa Bay. Serving Tampa, St. Pete, Clearwater, Brandon, Riverview, Wesley Chapel, Lakeland, Largo, Bradenton & Sarasota.",
     images: [
       {
         url: "/assets/nav/logo.png",
