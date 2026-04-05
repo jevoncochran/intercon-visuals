@@ -10,6 +10,12 @@ const showcaseVideos = [
     thumbnail: "/assets/home/olivo_med_spa_thumbnail.jpg",
   },
   {
+    title: "Heaven Sent Roofing",
+    industry: "Construction & Trades",
+    id: "1180308029",
+    thumbnail: "/assets/home/heaven_sent_donation_project_thumbnail.jpg",
+  },
+  {
     title: "Vida's Way",
     industry: "Real Estate",
     id: "1072425656",
@@ -27,12 +33,12 @@ const showcaseVideos = [
   //   id: "1062512983",
   //   thumbnail: "/assets/home/k55-thumbnail.jpg",
   // },
-  {
-    title: "Phyllis' 70th Birthday Party",
-    industry: "Events",
-    id: "1093350505",
-    thumbnail: "/assets/home/phyllis_70th_thumbnail.jpg",
-  },
+  // {
+  //   title: "Phyllis' 70th Birthday Party",
+  //   industry: "Events",
+  //   id: "1093350505",
+  //   thumbnail: "/assets/home/phyllis_70th_thumbnail.jpg",
+  // },
 ];
 
 const Showcase = () => {
