@@ -1,3 +1,8 @@
+const h3Class =
+  "font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold tracking-[-0.02em]";
+
+const pClass = "text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]";
+
 export default function Services() {
   return (
     <section id="services" className="bg-white px-6 md:px-10 py-20 md:py-28">
@@ -9,61 +14,51 @@ export default function Services() {
           </h2>
         </div>
 
-        {/* SERVICE 1 — VIDEOGRAPHY */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Videography
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
-              High-quality video is one of the most powerful ways to
-              communicate your brand&apos;s story. At Intercon Visuals, we produce
-              cinematic video content designed to capture attention, build
-              trust, and showcase what makes your business unique.
-            </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
-              From brand films and promotional videos to social media content
-              and event coverage, we help businesses stand out with visuals
-              that leave a lasting impression.
-            </p>
-          </div>
-
-          {/* IMAGE */}
-          <div>
+        {/* SERVICE 1 — VIDEOGRAPHY (text-left, image-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-1 md:row-start-1 md:self-end ${h3Class}`}>
+            Videography
+          </h3>
+          <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
             <img
               src="/assets/home/ai_generated_videographer.png"
               alt="Videography service"
               className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
             />
           </div>
+          <div className="order-3 md:col-start-1 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
+              High-quality video is one of the most powerful ways to
+              communicate your brand&apos;s story. At Intercon Visuals, we produce
+              cinematic video content designed to capture attention, build
+              trust, and showcase what makes your business unique.
+            </p>
+            <p className={`${pClass} mt-6`}>
+              From brand films and promotional videos to social media content
+              and event coverage, we help businesses stand out with visuals
+              that leave a lasting impression.
+            </p>
+          </div>
         </div>
 
-        {/* SERVICE 2 — PHOTOGRAPHY */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* IMAGE */}
-          <div>
+        {/* SERVICE 2 — PHOTOGRAPHY (image-left, text-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-2 md:row-start-1 md:self-end ${h3Class}`}>
+            Photography
+          </h3>
+          <div className="order-2 md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
             <img
               src="/assets/home/ai_generated_photographer.png"
               alt="Photography service"
               className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
             />
           </div>
-
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Photography
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
+          <div className="order-3 md:col-start-2 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
               Strong, polished visuals are essential for any brand looking to
               make a great impression.
             </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
+            <p className={`${pClass} mt-6`}>
               From team portraits and professional headshots to detailed
               shoots of products and services, we help businesses tell their
               brand story through impactful visuals.
@@ -71,60 +66,50 @@ export default function Services() {
           </div>
         </div>
 
-        {/* SERVICE 3 — SOCIAL MEDIA MANAGEMENT */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Social Media Management
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
-              Strong brands stay visible. We help businesses build a
-              consistent and engaging social media presence through strategic
-              content planning, professional visuals, and platform management.
-            </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
-              From content creation and posting to storytelling and audience
-              engagement, we manage your social media so you can focus on
-              running your business while your brand continues to grow online.
-            </p>
-          </div>
-
-          {/* IMAGE */}
-          <div>
+        {/* SERVICE 3 — SOCIAL MEDIA MANAGEMENT (text-left, image-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-1 md:row-start-1 md:self-end ${h3Class}`}>
+            Social Media Management
+          </h3>
+          <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
             <img
               src="/assets/home/ai_generated_social_media_manager.png"
               alt="Social media management service"
               className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
             />
           </div>
+          <div className="order-3 md:col-start-1 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
+              Strong brands stay visible. We help businesses build a
+              consistent and engaging social media presence through strategic
+              content planning, professional visuals, and platform management.
+            </p>
+            <p className={`${pClass} mt-6`}>
+              From content creation and posting to storytelling and audience
+              engagement, we manage your social media so you can focus on
+              running your business while your brand continues to grow online.
+            </p>
+          </div>
         </div>
 
-        {/* SERVICE 4 — PAID ADS */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* IMAGE */}
-          <div>
+        {/* SERVICE 4 — PAID ADS (image-left, text-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-2 md:row-start-1 md:self-end ${h3Class}`}>
+            Paid Ads
+          </h3>
+          <div className="order-2 md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
             <img
               src="/assets/home/ai_generated_media_buyer.png"
               alt="Paid ads service"
               className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
             />
           </div>
-
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Paid Ads
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
+          <div className="order-3 md:col-start-2 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
               Organic content builds your brand — paid advertising accelerates
               your growth.
             </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
+            <p className={`${pClass} mt-6`}>
               At Intercon Visuals, we develop strategic advertising campaigns
               designed to reach the right audience and convert attention into
               real leads. From ad creative and targeting to campaign
@@ -135,20 +120,24 @@ export default function Services() {
           </div>
         </div>
 
-        {/* SERVICE 5 — WEB DESIGN */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Web Design
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
+        {/* SERVICE 5 — WEB DESIGN (text-left, image-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-1 md:row-start-1 md:self-end ${h3Class}`}>
+            Web Design
+          </h3>
+          <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
+            <img
+              src="/assets/home/ai_generated_web_designer.png"
+              alt="Web design service"
+              className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
+            />
+          </div>
+          <div className="order-3 md:col-start-1 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
               Your website should do more than look good — it should build
               trust, communicate your value, and turn visitors into customers.
             </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
+            <p className={`${pClass} mt-6`}>
               At Intercon Visuals, we design modern, visually compelling
               websites that reflect your brand and create a seamless user
               experience. From service-based businesses to personal brands, we
@@ -156,41 +145,27 @@ export default function Services() {
               support growth.
             </p>
           </div>
-
-          {/* IMAGE */}
-          <div>
-            <img
-              src="/assets/home/ai_generated_web_designer.png"
-              alt="Web design service"
-              className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
-            />
-          </div>
         </div>
 
-        {/* SERVICE 6 — GRAPHIC DESIGN */}
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-28">
-          {/* IMAGE */}
-          <div>
+        {/* SERVICE 6 — GRAPHIC DESIGN (image-left, text-right on desktop) */}
+        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-4 mb-28">
+          <h3 className={`order-1 md:col-start-2 md:row-start-1 md:self-end ${h3Class}`}>
+            Graphic Design
+          </h3>
+          <div className="order-2 md:col-start-1 md:row-start-1 md:row-span-2 md:self-center">
             <img
               src="/assets/home/ai_generated_graphic_designer.png"
               alt="Graphic design service"
               className="w-full h-[420px] object-cover rounded-3xl shadow-lg"
             />
           </div>
-
-          {/* TEXT */}
-          <div className="max-w-xl">
-            <h3 className="font-[family-name:var(--font-montserrat)] text-black text-3xl md:text-4xl font-bold mb-6 tracking-[-0.02em]">
-              Graphic Design
-            </h3>
-
-            <p className="text-gray-700 text-lg leading-relaxed font-[var(--font-inter)]">
+          <div className="order-3 md:col-start-2 md:row-start-2 md:self-start max-w-xl">
+            <p className={pClass}>
               Strong brands are built on strong visuals. At Intercon Visuals,
               we create clean, modern graphic design that helps businesses
               present themselves professionally across every platform.
             </p>
-
-            <p className="text-gray-700 text-lg leading-relaxed mt-6 font-[var(--font-inter)]">
+            <p className={`${pClass} mt-6`}>
               From brand identity and marketing materials to social media
               graphics and ad creatives, we design visuals that strengthen
               your brand and support your marketing efforts.
